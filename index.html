@@ -405,16 +405,11 @@
 
 <!--
 ========================================================
-✅ WHATSAPP EDITÁVEL POR SERVIÇO (um número para cada botão)
-Formato: 55 + DDD + número (somente dígitos)
-Ex.: 5511999999999
+✅ WHATSAPP CONFIGURADO: 11980990976 (55 + 11 + 980990976)
 ========================================================
 -->
 <script>
-  const WHATSAPP_ATENDIMENTO = "5511921474407"; // Botão principal (11921474407)
-  const WHATSAPP_2VIA       = "5511921474407"; // 2ª Via de boleto (11921474407)
-  const WHATSAPP_SUPORTE    = "5511921474407"; // Suporte Técnico (11921474407)
-  const WHATSAPP_OUTROS     = "5511921474407"; // Outros Assuntos (11921474407)
+  const WHATSAPP_UNICO = "5511980990976"; // Número único: 11 98099-0976
 </script>
 
 <div class="wrap">
@@ -475,18 +470,6 @@ Ex.: 5511999999999
         </div>
 
         <div class="grid">
-          <a class="svc" id="svc2Via" href="#" target="_blank" rel="noopener">
-            <div class="ico">2ª</div>
-            <div>
-              <strong>2ª Via de Boleto</strong>
-              <span>Solicite a segunda via de forma rápida e segura.</span>
-            </div>
-            <div class="go">
-              <span>Acessar</span>
-              <span class="arrow">›</span>
-            </div>
-          </a>
-
           <a class="svc" id="svcSuporte" href="#" target="_blank" rel="noopener">
             <div class="ico">🛠</div>
             <div>
@@ -516,6 +499,18 @@ Ex.: 5511999999999
             <div>
               <strong>Atendimento Geral</strong>
               <span>Inicie o atendimento seguro no canal oficial.</span>
+            </div>
+            <div class="go">
+              <span>Acessar</span>
+              <span class="arrow">›</span>
+            </div>
+          </a>
+
+          <a class="svc" id="svcComercial" href="#" target="_blank" rel="noopener">
+            <div class="ico">💼</div>
+            <div>
+              <strong>Comercial</strong>
+              <span>Orçamentos, propostas e novos negócios.</span>
             </div>
             <div class="go">
               <span>Acessar</span>
@@ -603,23 +598,23 @@ Ex.: 5511999999999
 </a>
 
 <script>
-  function waLink(numero, servico){
+  function waLink(servico){
     const msg = "Olá! Preciso de atendimento sobre: " + servico;
-    return "https://wa.me/" + numero + "?text=" + encodeURIComponent(msg);
+    return "https://wa.me/" + WHATSAPP_UNICO + "?text=" + encodeURIComponent(msg);
   }
 
   // Botões principais
-  document.getElementById("btnAtendimento").href = "https://wa.me/" + WHATSAPP_ATENDIMENTO;
-  document.getElementById("btnSuporteTopo").href = waLink(WHATSAPP_SUPORTE, "Suporte Técnico");
+  document.getElementById("btnAtendimento").href = "https://wa.me/" + WHATSAPP_UNICO;
+  document.getElementById("btnSuporteTopo").href = waLink("Suporte Técnico");
 
-  // Cards
-  document.getElementById("svc2Via").href            = waLink(WHATSAPP_2VIA, "2ª Via de Boleto");
-  document.getElementById("svcSuporte").href         = waLink(WHATSAPP_SUPORTE, "Suporte Técnico");
-  document.getElementById("svcOutros").href          = waLink(WHATSAPP_OUTROS, "Outros Assuntos");
-  document.getElementById("svcAtendimentoCard").href = waLink(WHATSAPP_ATENDIMENTO, "Atendimento Geral");
+  // Cards de serviço (todos com o mesmo número)
+  document.getElementById("svcSuporte").href         = waLink("Suporte Técnico");
+  document.getElementById("svcOutros").href          = waLink("Outros Assuntos");
+  document.getElementById("svcAtendimentoCard").href = waLink("Atendimento Geral");
+  document.getElementById("svcComercial").href       = waLink("Comercial - Orçamentos");
 
   // Botão flutuante (atendimento geral)
-  document.getElementById("waFloat").href = "https://wa.me/" + WHATSAPP_ATENDIMENTO;
+  document.getElementById("waFloat").href = "https://wa.me/" + WHATSAPP_UNICO;
 
   // Ano
   document.getElementById("y").textContent = new Date().getFullYear();
