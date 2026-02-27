@@ -1,853 +1,629 @@
-
 <!doctype html>
-<html lang="pt-BR"
-	  xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:og="http://ogp.me/ns#"
-      xmlns:fb="http://www.facebook.com/2008/fbml">
-
+<html lang="pt-BR">
 <head>
-<meta charset="utf-8">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Central de Atendimento</title>
+  <meta name="description" content="Central de Atendimento - Serviços e suporte via WhatsApp.">
 
-<title>Internet Via Satélite</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-<meta name="description" content="Internet banda larga de alta velocidade via satélite para sua casa ou empresa. Confira as ofertas de serviços de internet e escolha a sua!">
-<meta name="author" content="WLIB Soluções Web - www.wlib.com.br">
+  <style>
+    :root{
+      /* 🎨 Rosa premium */
+      --primary:#ec4899;
+      --primary2:#be185d;
+      --accent:#fb7185;
 
-<base href="//www.ofertahughesnet.com.br/" />
+      --bgTop:#fff1f7;
+      --bgMid:#fdf2f8;
+      --bgBot:#ffffff;
 
-<meta property="og:title" content="Internet Via Satélite" />
-<meta property="og:description" content="Internet banda larga de alta velocidade via satélite para sua casa ou empresa. Confira as ofertas de serviços de internet e escolha a sua!" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://www.ofertahughesnet.com.br/index.php" />
-<meta property="og:image" content="http://www.ofertahughesnet.com.br/img/facebook.png" />
-<meta property="og:site_name" content="Empresa" />
+      --text:#0f172a;
+      --muted:#64748b;
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap">
-<link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap">
+      --card:#ffffff;
+      --border:rgba(2,6,23,.08);
 
-<link rel="stylesheet" type="text/css" href="css/style.css?20231023" />
-<link rel="stylesheet" type="text/css" href="css/apps.css?20231023" />
+      --shadow:0 24px 60px rgba(2,6,23,.14);
+      --shadow2:0 12px 28px rgba(2,6,23,.10);
 
-<script type="text/javascript" src="js/jquery.js"></script>
-<script defer type="text/javascript" src="js/jquery.sweetalert.js"></script>
-<script type="text/javascript" src="js/jquery.slick.js"></script>
-<script defer type="text/javascript" src="js/jquery.inputmask.js"></script>
-<script defer type="text/javascript" src="js/jquery.autocomplete.js"></script>
-<script defer type="text/javascript" src="js/jquery.validacao.js"></script>
-<script type="text/javascript" src="js/jquery.funcoes.js?20231023"></script>
-<script defer src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+      --radius:22px;
+      --radius2:18px;
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NFQS8K3G');</script>
-<!-- End Google Tag Manager -->
-
-<style>
-/* Estilos principais */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    overflow-x: hidden;
-    width: 100%;
-    padding-top: 80px;
-}
-
-.container {
-    width: 100%;
-}
-
-.content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    width: 100%;
-}
-
-/* Header FIXO */
-#header {
-    background-color: #0033a0;
-    padding: 15px 0;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-#header .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.logo-placeholder {
-    width: 183px;
-    height: 60px;
-    visibility: hidden;
-}
-
-.header-title {
-    color: white;
-    font-size: 1.5em;
-    font-weight: 800;
-    text-align: center;
-    flex: 1;
-    margin: 0 20px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    letter-spacing: 1px;
-}
-
-/* Botões de ação - ATENDIMENTO ONLINE */
-.action-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 30px 0 50px;
-    flex-wrap: wrap;
-    text-align: center;
-    width: 100%;
-}
-
-.btn-atendimento {
-    background-color: #ff6b00;
-    color: white;
-    padding: 18px 40px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 1.3em;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-    display: inline-block;
-    box-shadow: 0 4px 10px rgba(255, 107, 0, 0.3);
-    border: none;
-    cursor: pointer;
-    text-align: center;
-}
-
-.btn-atendimento:hover {
-    background-color: #e05e00;
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(255, 107, 0, 0.4);
-}
-
-/* Blocos de conteúdo */
-.content-block {
-    padding: 40px;
-    background-color: #f9f9f9;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    line-height: 1.8;
-    margin-bottom: 30px;
-    width: 100%;
-}
-
-.content-block h2 {
-    color: #0033a0;
-    font-size: 2em;
-    margin-bottom: 25px;
-    font-weight: 700;
-    border-bottom: 3px solid #ff6b00;
-    padding-bottom: 10px;
-    display: inline-block;
-    max-width: 100%;
-}
-
-.content-block h3 {
-    color: #0033a0;
-    font-size: 1.4em;
-    margin: 25px 0 15px;
-    font-weight: 600;
-}
-
-.content-block p {
-    margin-bottom: 20px;
-    font-size: 1.1em;
-    color: #444;
-    text-align: left;
-}
-
-.content-block ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-    text-align: left;
-}
-
-.content-block ul li {
-    margin-bottom: 15px;
-    padding-left: 30px;
-    position: relative;
-    font-size: 1.1em;
-}
-
-.content-block ul li:before {
-    content: "✓";
-    color: #ff6b00;
-    position: absolute;
-    left: 0;
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-.highlight-box {
-    background-color: white;
-    border-left: 5px solid #ff6b00;
-    padding: 25px;
-    margin: 30px 0;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-    text-align: left;
-}
-
-.highlight-box h4 {
-    color: #0033a0;
-    font-size: 1.3em;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin: 30px 0;
-    width: 100%;
-}
-
-.stat-item {
-    text-align: center;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-    width: 100%;
-}
-
-.stat-number {
-    font-size: 2.5em;
-    font-weight: 800;
-    color: #0033a0;
-    display: block;
-    line-height: 1.2;
-}
-
-.stat-label {
-    font-size: 1em;
-    color: #666;
-}
-
-.highlight {
-    color: #ff6b00;
-    font-weight: 600;
-}
-
-/* Vantagens */
-.vantagens {
-    margin-top: 60px;
-    width: 100%;
-}
-
-.vantagens header {
-    text-align: center;
-    margin-bottom: 40px;
-    width: 100%;
-}
-
-.vantagens header h1 {
-    color: #0033a0;
-    font-size: 2.2em;
-}
-
-.vantagens article {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    width: 100%;
-}
-
-.vantagens-item {
-    text-align: center;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-.vantagens-item i {
-    font-size: 5em !important;
-    color: #ff6b00;
-    margin-bottom: 20px;
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-
-.vantagens-item i:hover {
-    transform: scale(1.1);
-}
-
-.vantagens-item h1 {
-    color: #0033a0;
-    font-size: 1.5em;
-    margin-bottom: 15px;
-    font-weight: 700;
-    text-align: center;
-}
-
-.vantagens-item p {
-    color: #666;
-    line-height: 1.6;
-    font-size: 1.1em;
-    max-width: 280px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-/* Condições */
-#condicoes {
-    margin: 40px 0;
-    width: 100%;
-}
-
-#condicoes .content {
-    font-size: 0.9em;
-    color: #666;
-}
-
-#condicoes p {
-    margin-bottom: 10px;
-}
-
-/* Footer Desktop */
-.footer {
-    background-color: #0033a0;
-    color: white;
-    padding: 40px 0 20px;
-    margin-top: 60px;
-    width: 100%;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
-    width: 100%;
-}
-
-.footer-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.footer-item:hover {
-    transform: scale(1.05);
-    color: #ff6b00;
-}
-
-.footer-item i {
-    font-size: 2em;
-}
-
-.footer-item h2 {
-    font-size: 1.1em;
-    font-weight: 600;
-}
-
-.footer p {
-    text-align: center;
-    margin: 2rem 0 -2rem 0;
-    font-size: 0.813em;
-    color: white;
-}
-
-.footer p a {
-    color: white;
-    text-decoration: underline;
-}
-
-.footer p a:hover {
-    color: #ff6b00;
-}
-
-/* WhatsApp flutuante */
-.whatsapp {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #25D366;
-    color: white;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.5em;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    transition: all 0.3s ease;
-    z-index: 1000;
-    text-decoration: none;
-}
-
-.whatsapp:hover {
-    transform: scale(1.1);
-    background-color: #20ba5a;
-}
-
-/* Footer Mobile */
-.footer-mob {
-    display: none;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-    body {
-        padding-top: 70px;
+      --max:1120px;
     }
-    
-    .content {
-        padding: 0 15px;
-    }
-    
-    #header .content {
-        flex-wrap: nowrap;
-        gap: 5px;
-    }
-    
-    .logo-placeholder {
-        width: 50px;
-        height: 30px;
-        visibility: hidden;
-    }
-    
-    .header-title {
-        font-size: 1.1em;
-        margin: 0 5px;
-        white-space: normal;
-        line-height: 1.3;
-        text-align: center;
-    }
-    
-    .action-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        margin: 20px 0 30px;
-    }
-    
-    .btn-atendimento {
-        padding: 15px 25px;
-        font-size: 1.1em;
-        width: 100%;
-        max-width: 300px;
-    }
-    
-    .content-block {
-        padding: 25px 20px;
-    }
-    
-    .content-block h2 {
-        font-size: 1.6em;
-        display: block;
-        text-align: center;
-        width: 100%;
-    }
-    
-    .content-block h3 {
-        font-size: 1.3em;
-        text-align: center;
-    }
-    
-    .content-block p {
-        font-size: 1em;
-        text-align: center;
-    }
-    
-    .content-block ul {
-        text-align: left;
-    }
-    
-    .content-block ul li {
-        font-size: 1em;
-        text-align: left;
-    }
-    
-    .stats-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    
-    .stat-item {
-        padding: 15px;
-    }
-    
-    .stat-number {
-        font-size: 2em;
-    }
-    
-    .highlight-box {
-        padding: 20px;
-        text-align: center;
-    }
-    
-    .highlight-box h4 {
-        font-size: 1.2em;
-        text-align: center;
-    }
-    
-    .highlight-box p {
-        text-align: center;
-    }
-    
-    .vantagens header h1 {
-        font-size: 1.8em;
-    }
-    
-    .vantagens article {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .vantagens-item {
-        padding: 15px;
-    }
-    
-    .vantagens-item i {
-        font-size: 4em !important;
-    }
-    
-    .vantagens-item h1 {
-        font-size: 1.3em;
-    }
-    
-    .vantagens-item p {
-        font-size: 1em;
-        max-width: 100%;
-    }
-    
-    .footer {
-        display: none;
-    }
-    
-    .footer-mob {
-        display: block;
-        background-color: #0033a0;
-        color: white;
-        padding: 20px 0;
-        margin-top: 40px;
-        width: 100%;
-    }
-    
-    .footer-mob header {
-        text-align: center;
-        margin-bottom: 15px;
-        width: 100%;
-    }
-    
-    .footer-mob header h1 {
-        font-size: 1.2em;
-        color: white;
-        text-align: center;
-    }
-    
-    .footer-mob article {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-    
-    .footer-mob-item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        text-decoration: none;
-        padding: 10px;
-        width: auto;
-    }
-    
-    .footer-mob-item i {
-        font-size: 3em;
-    }
-    
-    #condicoes .content {
-        text-align: center;
-    }
-    
-    #condicoes p {
-        text-align: center;
-    }
-}
 
-@media (max-width: 480px) {
-    body {
-        padding-top: 90px;
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      color:var(--text);
+      background:
+        radial-gradient(900px 520px at 12% 0%, rgba(236,72,153,.22), transparent 60%),
+        radial-gradient(900px 520px at 90% 10%, rgba(190,24,93,.18), transparent 62%),
+        linear-gradient(180deg,var(--bgTop),var(--bgMid),var(--bgBot));
     }
-    
-    #header .content {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-    
-    .logo-placeholder {
-        width: 40px;
-        height: 20px;
-        visibility: hidden;
-    }
-    
-    .header-title {
-        font-size: 1em;
-        order: 3;
-        width: 100%;
-        margin: 5px 0 0;
-    }
-    
-    .btn-atendimento {
-        padding: 12px 20px;
-        font-size: 1em;
-        max-width: 250px;
-    }
-    
-    .content-block {
-        padding: 20px 15px;
-    }
-    
-    .content-block h2 {
-        font-size: 1.4em;
-    }
-    
-    .vantagens-item i {
-        font-size: 3.5em !important;
-    }
-}
-</style>
 
+    a{color:inherit}
+    .wrap{max-width:var(--max);margin:0 auto;padding:20px 16px 90px}
+    .sr{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+    /* ===== Top Bar (profissional) ===== */
+    .topbar{
+      position:sticky; top:12px; z-index:50;
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+      padding:14px 14px;
+      border-radius:18px;
+      background:rgba(255,255,255,.74);
+      border:1px solid rgba(2,6,23,.06);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow2);
+    }
+
+    .brand{display:flex; align-items:center; gap:12px; min-width:0}
+    .logo{
+      width:46px; height:46px; border-radius:14px;
+      background:#fff;
+      border:1px solid rgba(2,6,23,.08);
+      box-shadow:0 10px 20px rgba(2,6,23,.10);
+      object-fit:contain;
+      flex:0 0 auto;
+    }
+    .brandTxt{min-width:0}
+    .brandTxt h1{
+      margin:0;
+      font-size:18px;
+      letter-spacing:-.2px;
+      line-height:1.1;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .brandTxt p{
+      margin:3px 0 0;
+      font-size:12px;
+      color:var(--muted);
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    .seal{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(236,72,153,.10);
+      border:1px solid rgba(236,72,153,.20);
+      color:var(--primary2);
+      font-weight:900;
+      font-size:12px;
+      white-space:nowrap;
+    }
+    .dot{
+      width:9px;height:9px;border-radius:50%;
+      background:var(--primary);
+      box-shadow:0 0 0 5px rgba(236,72,153,.16);
+    }
+
+    /* ===== Hero ===== */
+    .hero{
+      margin-top:16px;
+      border-radius:var(--radius);
+      background:var(--card);
+      border:1px solid var(--border);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .hero:before{
+      content:"";
+      position:absolute; right:-110px; top:-140px;
+      width:420px; height:420px; border-radius:50%;
+      background:
+        radial-gradient(circle at 30% 30%,
+          rgba(236,72,153,.26),
+          rgba(236,72,153,0) 62%);
+    }
+    .heroInner{
+      padding:24px;
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:18px;
+      align-items:stretch;
+    }
+
+    .title{
+      margin:0;
+      font-size:40px;
+      letter-spacing:-.8px;
+      line-height:1.05;
+    }
+    .subtitle{
+      margin:12px 0 0;
+      color:rgba(15,23,42,.76);
+      line-height:1.7;
+      font-size:15px;
+    }
+
+    .ctaRow{
+      margin-top:18px;
+      display:flex; flex-wrap:wrap;
+      gap:12px;
+      align-items:center;
+    }
+
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:14px 20px;
+      border-radius:999px;
+      background:linear-gradient(135deg,var(--primary2),var(--primary));
+      color:#fff;
+      text-decoration:none;
+      font-weight:900;
+      box-shadow:0 18px 40px rgba(236,72,153,.34);
+      border:1px solid rgba(255,255,255,.18);
+      transition:transform .08s ease, filter .12s ease;
+      user-select:none;
+    }
+    .btn:hover{filter:brightness(1.03)}
+    .btn:active{transform:translateY(1px)}
+    .btnGhost{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:13px 18px;
+      border-radius:999px;
+      background:rgba(236,72,153,.08);
+      border:1px solid rgba(236,72,153,.22);
+      color:var(--primary2);
+      text-decoration:none;
+      font-weight:900;
+      transition:transform .08s ease, background .12s ease;
+      user-select:none;
+    }
+    .btnGhost:hover{background:rgba(236,72,153,.11)}
+    .btnGhost:active{transform:translateY(1px)}
+
+    .trust{
+      margin-top:16px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:10px;
+    }
+    .trustCard{
+      border-radius:18px;
+      padding:12px 12px;
+      background:rgba(236,72,153,.06);
+      border:1px solid rgba(236,72,153,.14);
+    }
+    .trustCard strong{display:block;font-size:13px}
+    .trustCard span{display:block;margin-top:4px;font-size:12px;color:var(--muted);line-height:1.35}
+
+    /* ===== Services (cards premium) ===== */
+    .servicesBox{
+      border-radius:18px;
+      background:rgba(236,72,153,.04);
+      border:1px solid rgba(236,72,153,.12);
+      padding:14px;
+      position:relative;
+    }
+
+    .servicesHead{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
+      padding:4px 6px 12px;
+    }
+    .servicesHead h2{margin:0;font-size:16px}
+    .servicesHead p{margin:0;font-size:12px;color:var(--muted)}
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+    }
+
+    .svc{
+      display:flex; gap:12px; align-items:flex-start;
+      padding:14px;
+      border-radius:18px;
+      background:#fff;
+      border:1px solid rgba(2,6,23,.08);
+      box-shadow:0 12px 24px rgba(2,6,23,.08);
+      text-decoration:none;
+      transition:transform .10s ease, box-shadow .10s ease, border-color .10s ease;
+      min-height:96px;
+    }
+    .svc:hover{
+      transform:translateY(-2px);
+      box-shadow:0 18px 36px rgba(2,6,23,.12);
+      border-color:rgba(236,72,153,.22);
+    }
+
+    .ico{
+      width:46px; height:46px;
+      border-radius:16px;
+      display:flex; align-items:center; justify-content:center;
+      background:linear-gradient(135deg, rgba(190,24,93,.18), rgba(236,72,153,.12));
+      border:1px solid rgba(236,72,153,.20);
+      color:var(--primary2);
+      font-weight:1000;
+      flex:0 0 auto;
+    }
+
+    .svc strong{display:block;font-size:14px}
+    .svc span{display:block;margin-top:4px;font-size:12px;color:var(--muted);line-height:1.35}
+    .go{
+      margin-left:auto;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      color:var(--primary2);
+      font-weight:900;
+      font-size:12px;
+      white-space:nowrap;
+    }
+    .arrow{
+      width:26px;height:26px;border-radius:10px;
+      display:inline-flex;align-items:center;justify-content:center;
+      background:rgba(236,72,153,.10);
+      border:1px solid rgba(236,72,153,.16);
+    }
+
+    /* ===== Split section ===== */
+    .split{
+      margin-top:16px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+      align-items:stretch;
+    }
+    .panel{
+      background:#fff;
+      border:1px solid rgba(2,6,23,.08);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow2);
+      padding:22px;
+    }
+    .panel h3{margin:0;font-size:28px;letter-spacing:-.3px;line-height:1.15}
+    .panel h4{margin:10px 0 0;font-size:16px}
+    .panel p{margin:10px 0 0;line-height:1.75;color:var(--muted)}
+
+    .steps{margin-top:14px;display:grid;gap:10px}
+    .step{
+      display:flex;gap:12px;align-items:flex-start;
+      padding:12px;
+      border-radius:18px;
+      background:rgba(236,72,153,.05);
+      border:1px solid rgba(236,72,153,.14);
+    }
+    .n{
+      width:34px;height:34px;border-radius:12px;
+      background:rgba(236,72,153,.12);
+      border:1px solid rgba(236,72,153,.22);
+      display:flex;align-items:center;justify-content:center;
+      color:var(--primary2);
+      font-weight:1000;
+      flex:0 0 auto;
+    }
+    .step b{display:block;font-size:13px}
+    .step i{display:block;font-style:normal;color:var(--muted);font-size:12px;line-height:1.35;margin-top:2px}
+
+    .imgPanel{
+      border-radius:var(--radius);
+      border:1px solid rgba(2,6,23,.08);
+      box-shadow:var(--shadow2);
+      overflow:hidden;
+      position:relative;
+      min-height:330px;
+      background:url("https://i.imgur.com/Lq7TJha.png") center/cover no-repeat;
+    }
+    .imgPanel:after{
+      content:"";
+      position:absolute;inset:0;
+      background:linear-gradient(135deg, rgba(236,72,153,.14), rgba(190,24,93,.10));
+      pointer-events:none;
+    }
+
+    /* ===== Values ===== */
+    .values{
+      margin-top:16px;
+      background:#0b1220;
+      color:#fff;
+      padding:56px 18px;
+    }
+    .values h3{margin:0;text-align:center;font-size:26px;letter-spacing:-.2px}
+    .vgrid{
+      max-width:var(--max);
+      margin:28px auto 0;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+    }
+    .vbox{
+      border-radius:18px;
+      padding:18px;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.10);
+    }
+    .vbox strong{font-size:16px}
+    .vbox p{margin:10px 0 0;color:rgba(255,255,255,.75);line-height:1.6}
+
+    /* ===== Footer ===== */
+    footer{
+      background:#fff;
+      border-top:1px solid rgba(0,0,0,.08);
+      padding:18px 12px;
+      text-align:center;
+      color:#6b7280;
+      font-size:13px;
+      line-height:1.45;
+    }
+
+    /* ===== WhatsApp Floating Button ===== */
+    .waFloat{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius:999px;
+      background:linear-gradient(135deg,var(--primary2),var(--primary));
+      color:#fff;
+      text-decoration:none;
+      font-weight:1000;
+      box-shadow:0 18px 40px rgba(236,72,153,.35);
+      z-index:60;
+      border:1px solid rgba(255,255,255,.18);
+    }
+    .waFloat .w{
+      width:34px;height:34px;border-radius:14px;
+      background:rgba(255,255,255,.18);
+      display:flex;align-items:center;justify-content:center;
+      border:1px solid rgba(255,255,255,.22);
+      font-weight:1000;
+    }
+
+    /* Responsivo */
+    @media(max-width:980px){
+      .heroInner{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .split{grid-template-columns:1fr}
+      .trust{grid-template-columns:1fr}
+      .vgrid{grid-template-columns:1fr}
+      .title{font-size:30px}
+      .topbar{position:static}
+      .waFloat{left:16px;right:16px;justify-content:center}
+    }
+
+    /* Preferências de movimento */
+    @media (prefers-reduced-motion: reduce){
+      .btn,.btnGhost,.svc{transition:none}
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFQS8K3G"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<!--
+========================================================
+✅ WHATSAPP EDITÁVEL POR SERVIÇO (um número para cada botão)
+Formato: 55 + DDD + número (somente dígitos)
+Ex.: 5511999999999
+========================================================
+-->
+<script>
+  const WHATSAPP_ATENDIMENTO = "5511921474407"; // Botão principal (11921474407)
+  const WHATSAPP_2VIA       = "5511921474407"; // 2ª Via de boleto (11921474407)
+  const WHATSAPP_SUPORTE    = "5511921474407"; // Suporte Técnico (11921474407)
+  const WHATSAPP_OUTROS     = "5511921474407"; // Outros Assuntos (11921474407)
+</script>
 
-<header id="header">
-	<div class="content">
-		<div class="logo-placeholder"></div>
-		
-		<div class="header-title">PORTAL DE ATENDIMENTO</div>
-	</div>
-</header>
+<div class="wrap">
 
-<section id="index">
-	<div class="content">
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <div class="brand">
+      <!-- ✅ Troque a logo aqui -->
+      <img src="https://i.imgur.com/J2Zs0La.png" class="logo" alt="Logo">
+      <div class="brandTxt">
+        <h1>Central de Atendimento</h1>
+        <p>Serviços e suporte via WhatsApp</p>
+      </div>
+    </div>
+    <div class="seal"><span class="dot"></span> Atendimento oficial • Canal seguro</div>
+  </header>
 
-		<!-- BOTÃO ATENDIMENTO ONLINE (ALTERADO) -->
-		<div class="action-buttons">
-			<a href="https://wa.me/5511921474407?text=Olá! Preciso de atendimento" class="btn-atendimento" target="_blank">ATENDIMENTO ONLINE</a>
-		</div>
+  <!-- HERO -->
+  <section class="hero" aria-label="Solicite atendimento">
+    <div class="heroInner">
 
-		<!-- Bloco Conheça a Empresa -->
-		<div class="content-block">
-			<h2>Conheça a Empresa</h2>
-			
-			<p>Líder mundial em internet via satélite, presente em mais de 100 países e com uma trajetória de inovação que começou em 1932. No Brasil desde 1968, consolidou-se como a principal provedora de internet banda larga via satélite para áreas rurais e regiões onde as conexões tradicionais não chegam com qualidade.</p>
+      <div>
+        <h2 class="title">Solicite Atendimento</h2>
+        <p class="subtitle">
+          Selecione o serviço desejado e inicie o atendimento seguro pelo WhatsApp.
+        </p>
 
-			<div class="stats-grid">
-				<div class="stat-item">
-					<span class="stat-number">+100</span>
-					<span class="stat-label">países atendidos</span>
-				</div>
-				<div class="stat-item">
-					<span class="stat-number">50%</span>
-					<span class="stat-label">market share global VSAT</span>
-				</div>
-				<div class="stat-item">
-					<span class="stat-number">1968</span>
-					<span class="stat-label">no Brasil desde</span>
-				</div>
-				<div class="stat-item">
-					<span class="stat-number">30+</span>
-					<span class="stat-label">bases técnicas</span>
-				</div>
-			</div>
+        <div class="ctaRow">
+          <a class="btn" id="btnAtendimento" href="#" target="_blank" rel="noopener">
+            Iniciar Atendimento Seguro
+          </a>
 
-			<div class="highlight-box">
-				<h4>História de Inovação</h4>
-				<p>Fomos pioneiros no desenvolvimento dos primeiros satélites de comunicação geoestacionários, nos primeiros sistemas VSAT para comunicação corporativa e no lançamento do primeiro serviço de internet banda larga via satélite do mundo, em 1995. Desde 2016, levamos internet de qualidade para residências e empresas em todo o território nacional.</p>
-			</div>
+          <a class="btnGhost" id="btnSuporteTopo" href="#" target="_blank" rel="noopener">
+            Falar com Suporte
+          </a>
+        </div>
 
-			<h3>Por que escolher este serviço?</h3>
-			<ul>
-				<li><strong>Líder mundial:</strong> Maior provedora de internet via satélite do mundo, com tecnologia de ponta e experiência comprovada.</li>
-				<li><strong>Cobertura nacional:</strong> Rede que cobre mais de 5 mil municípios brasileiros, alcançando locais onde outras operadoras não chegam.</li>
-				<li><strong>Tecnologia avançada:</strong> Satélites de alta capacidade (HTS) em banda Ka, com o maior satélite de comunicação comercial do mundo, lançado em 2023.</li>
-				<li><strong>Suporte completo:</strong> 30 bases técnicas em todo o Brasil e centro de operações de rede com monitoramento 24 horas por dia, 7 dias por semana.</li>
-				<li><strong>Reconhecimento:</strong> Certificados com o selo RA 1000 no Reclame Aqui há três anos consecutivos.</li>
-			</ul>
+        <div class="trust" aria-label="Benefícios">
+          <div class="trustCard">
+            <strong>Rápido</strong>
+            <span>Inicie em poucos cliques.</span>
+          </div>
+          <div class="trustCard">
+            <strong>Seguro</strong>
+            <span>Atendimento direto no WhatsApp.</span>
+          </div>
+          <div class="trustCard">
+            <strong>Assistido</strong>
+            <span>Equipe pronta para ajudar.</span>
+          </div>
+        </div>
+      </div>
 
-			<div class="highlight-box">
-				<h4>WhatsApp Livre*</h4>
-				<p>Vantagem exclusiva: envie e receba mensagens de texto, áudio e arquivos pelo aplicativo WhatsApp sem descontar do seu pacote de dados.</p>
-			</div>
-		</div>
+      <div class="servicesBox" aria-label="Serviços disponíveis">
+        <div class="servicesHead">
+          <h2>Serviços disponíveis</h2>
+          <p>Clique para iniciar</p>
+        </div>
 
-		<!-- Bloco Internet Via Satélite -->
-		<div class="content-block">
-			<h2>Internet Via Satélite</h2>
-			
-			<p>A <span class="highlight">internet via satélite é a solução ideal para quem mora ou trabalha em áreas onde a fibra óptica e outras conexões terrestres não chegam</span>. Tenha acesso à internet banda larga de alta qualidade em qualquer lugar do Brasil.</p>
+        <div class="grid">
+          <a class="svc" id="svc2Via" href="#" target="_blank" rel="noopener">
+            <div class="ico">2ª</div>
+            <div>
+              <strong>2ª Via de Boleto</strong>
+              <span>Solicite a segunda via de forma rápida e segura.</span>
+            </div>
+            <div class="go">
+              <span>Acessar</span>
+              <span class="arrow">›</span>
+            </div>
+          </a>
 
-			<h3>Como funciona?</h3>
-			<p>A tecnologia é simples e avançada ao mesmo tempo. Os satélites estão em órbita geoestacionária, a aproximadamente 36.000 km de distância da Terra. Quando você acessa um site, o sinal é enviado do seu computador para o modem e antena instalados em sua casa, que se comunicam com o satélite. O satélite então se conecta ao centro de operações (Gateway), que estabelece a conexão e devolve o sinal com as informações solicitadas – tudo isso em milissegundos.</p>
+          <a class="svc" id="svcSuporte" href="#" target="_blank" rel="noopener">
+            <div class="ico">🛠</div>
+            <div>
+              <strong>Suporte Técnico</strong>
+              <span>Ajuda com dúvidas e suporte no atendimento.</span>
+            </div>
+            <div class="go">
+              <span>Acessar</span>
+              <span class="arrow">›</span>
+            </div>
+          </a>
 
-			<div class="highlight-box">
-				<h4>Equipamentos Inclusos</h4>
-				<p>Na instalação, você recebe gratuitamente: uma antena parabólica de pequeno porte, um modem de última geração e um roteador Wi-Fi. Tudo incluso, sem custo adicional de equipamentos.</p>
-			</div>
+          <a class="svc" id="svcOutros" href="#" target="_blank" rel="noopener">
+            <div class="ico">⋯</div>
+            <div>
+              <strong>Outros Assuntos</strong>
+              <span>Fale conosco sobre outros temas e solicitações.</span>
+            </div>
+            <div class="go">
+              <span>Acessar</span>
+              <span class="arrow">›</span>
+            </div>
+          </a>
 
-			<h3>Tecnologia de Ponta: Banda Ka</h3>
-			<p>Utilizamos a <span class="highlight">tecnologia de banda Ka</span>, que é mais potente, estável e concentrada do que as bandas utilizadas em outros serviços via satélite. Isso garante melhor desempenho, maior velocidade e conexão mais estável, mesmo em condições climáticas adversas. Os satélites de alta capacidade (HTS) proporcionam uma experiência de navegação superior.</p>
+          <a class="svc" id="svcAtendimentoCard" href="#" target="_blank" rel="noopener">
+            <div class="ico">✓</div>
+            <div>
+              <strong>Atendimento Geral</strong>
+              <span>Inicie o atendimento seguro no canal oficial.</span>
+            </div>
+            <div class="go">
+              <span>Acessar</span>
+              <span class="arrow">›</span>
+            </div>
+          </a>
+        </div>
+      </div>
 
-			<h3>Vantagens da Internet Via Satélite</h3>
-			<ul>
-				<li><strong>Disponibilidade onde outras não chegam:</strong> Ideal para áreas rurais, sítios, fazendas, chácaras e regiões afastadas dos grandes centros.</li>
-				<li><strong>Instalação fácil e rápida:</strong> Técnico especializado vai até sua residência e realiza toda a instalação, sem necessidade de obras ou cabos externos.</li>
-				<li><strong>Conexão estável:</strong> Diferente de conexões via rádio, a internet via satélite não sofre com interferências de relevo ou distância das torres.</li>
-				<li><strong>Planos com bônus noturno:</strong> Todos os planos Flex oferecem um bônus de dados para uso entre meia-noite e 8h ou 9h da manhã, perfeito para downloads e atualizações.</li>
-				<li><strong>Wi-Fi incluso:</strong> Roteador Wi-Fi gratuito para conectar todos os seus dispositivos.</li>
-			</ul>
+    </div>
+  </section>
 
-			<h3>Como funciona a franquia de dados?</h3>
-			<p>Os planos funcionam com um sistema inteligente de franquia: primeiro é consumido o bônus do horário específico (madrugada), e depois o pacote principal de dados. Caso atinja o limite, a velocidade é reduzida para até 1 Mbps, sem cortes ou bloqueios. Você também pode adquirir pacotes de recarga que ficam válidos por 180 dias.</p>
+  <!-- SPLIT -->
+  <section class="split" aria-label="Informações do atendimento">
+    <div class="panel">
+      <h3>Soluções na palma<br>da sua mão</h3>
+      <h4>Facilite seu atendimento</h4>
 
-			<div class="stats-grid">
-				<div class="stat-item">
-					<span class="stat-number">36.000 km</span>
-					<span class="stat-label">órbita dos satélites</span>
-				</div>
-				<div class="stat-item">
-					<span class="stat-number">+150 Gbps</span>
-					<span class="stat-label">capacidade dos satélites</span>
-				</div>
-				<div class="stat-item">
-					<span class="stat-number">100%</span>
-					<span class="stat-label">cobertura nacional</span>
-				</div>
-				<div class="stat-item">
-					<span class="stat-number">0</span>
-					<span class="stat-label">linha telefônica necessária</span>
-				</div>
-			</div>
-		</div>
+      <p>Tenha um fluxo simples, rápido e seguro para solicitar suporte e serviços.</p>
 
-		<!-- Seção de Vantagens -->
-		<div class="vantagens">
-			<header>
-				<h1>Vantagens</h1>
-			</header>
+      <p>
+        Nós acreditamos que um bom atendimento consiste em oferecer processos simples e seguros,
+        que tornem o dia a dia do cliente mais fácil e que estejam acessíveis nos momentos e nos canais
+        que o cliente preferir.
+      </p>
 
-			<article>
-				<div class="vantagens-item">
-					<i class="iconify" data-icon="fluent:person-wrench-20-filled"></i>
-					<h1>Instalação fácil</h1>
-					<p>O técnico vai até você para realizar a instalação de sua internet.</p>
-				</div>
-				<div class="vantagens-item">
-					<i class="iconify" data-icon="cib:whatsapp"></i>
-					<h1>WhatsApp livre*</h1>
-					<p>Troque mensagens de texto, áudio e arquivos pelo aplicativo WhatsApp sem descontar do pacote de dados.</p>
-				</div>
-				<div class="vantagens-item">
-					<i class="iconify" data-icon="fluent:router-20-filled"></i>
-					<h1>Roteador wi-fi incluso</h1>
-					<p>Roteador Wi-Fi para você conectar seu aparelho celular ou outros dispositivos móveis.</p>
-				</div>
-				<div class="vantagens-item">
-					<i class="iconify" data-icon="fluent:globe-24-regular"></i>
-					<h1>Ampla cobertura</h1>
-					<p>Cobertura em mais de 5 mil municípios do Brasil.</p>
-				</div>
-				<div class="vantagens-item">
-					<i class="iconify" data-icon="ic:outline-satellite-alt"></i>
-					<h1>Internet rural</h1>
-					<p>3 satélites em operação no Brasil.</p>
-				</div>
-				<div class="vantagens-item">
-					<i class="iconify" data-icon="la:smile"></i>
-					<h1>Planos flexíveis</h1>
-					<p>Planos com até 160 Giga de bônus com horário de utilização ampliado.</p>
-				</div>
-			</article>
-		</div>
-	</div>
+      <div class="steps" aria-label="Como funciona">
+        <div class="step">
+          <div class="n">1</div>
+          <div>
+            <b>Escolha o serviço</b>
+            <i>Selecione a opção desejada nos cards.</i>
+          </div>
+        </div>
+        <div class="step">
+          <div class="n">2</div>
+          <div>
+            <b>Inicie no WhatsApp</b>
+            <i>Mensagem automática para agilizar o atendimento.</i>
+          </div>
+        </div>
+        <div class="step">
+          <div class="n">3</div>
+          <div>
+            <b>Conclua a solicitação</b>
+            <i>Nossa equipe orienta até finalizar o atendimento.</i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="imgPanel" aria-hidden="true"></div>
+  </section>
+
+</div>
+
+<!-- VALUES -->
+<section class="values" aria-label="Compromissos">
+  <h3>Compromissos</h3>
+  <div class="vgrid">
+    <div class="vbox">
+      <strong>01 ✓ Transparência</strong>
+      <p>Nosso compromisso com a transparência cria confiança.</p>
+    </div>
+    <div class="vbox">
+      <strong>02 ✓ Seriedade</strong>
+      <p>Relações sólidas baseadas em integridade.</p>
+    </div>
+    <div class="vbox">
+      <strong>03 ✓ Ética</strong>
+      <p>Atuação ética e responsável.</p>
+    </div>
+  </div>
 </section>
 
-<section id="condicoes" class="container">
-	<div class="content">
-		<p>(*)</p>		
-		<p>Em contratos sem permanência, o valor da taxa de adesão é R$ 1.359,00 (hum mil e trezentos e cinquenta e nove reais). Em contratos com permanência, caso haja rescisão antecipada por parte do assinante, haverá cobrança correspondente ao valor do benefício inicialmente concedido, de forma proporcional ao período efetivamente cumprido.</p>
-		<p>A contratação desta oferta está sujeita à análise de crédito. Os planos residenciais têm permanência de 12 meses e taxa de adesão em sua contratação (R$ 159.00 para FORTALEZA-CE) no cartão de crédito ou boleto bancário).</p>
-		<p>Promoção não cumulativa com outras promoções. Todos os planos possuem franquias de consumo. Equipamento em comodato e Wi-Fi de presente. Consulte disponibilidade em sua região.</p>
-		<p>As velocidades máximas podem variar de acordo com o plano e as características técnicas do serviço.</p>
-		<p>Instalações nos estados de Goiás, Mato Grosso e Mato Grosso do Sul poderão estar sujeitas à cobrança adicional por deslocamento, a ser negociada e paga diretamente ao técnico instalador local.</p>
-	</div>
-</section>
+<footer>
+  © <span id="y"></span> Central de Atendimento • Todos os direitos reservados<br>
+  AV HUGO SCHLOSSER, 69 • ANDAR 1 • JARDIM MALUCHE<br>
+  BRUSQUE - SC • 88354-300 • Brasil
+</footer>
 
-<a href="https://wa.me/5511921474407?text=Olá! Gostaria de falar com o atendimento" class="whatsapp" target="_blank">
-    <i class="iconify" data-icon="cib:whatsapp"></i>
+<!-- Floating WhatsApp -->
+<a class="waFloat" id="waFloat" href="#" target="_blank" rel="noopener">
+  <span class="w">WA</span> Atendimento WhatsApp
 </a>
 
-<div class="footer">
-	<div class="footer-content content">
-		<a href="https://wa.me/5511921474407?text=Olá! Gostaria de falar com o atendimento" class="footer-item" target="_blank">
-			<i class="iconify" data-icon="ic:baseline-whatsapp"></i>
-			<div>
-				<h2>ATENDIMENTO</h2>
-			</div>
-		</a>
-	</div>
-	<p>Agente Autorizado<br />CNPJ: 20.714.548/0001-00<br /><a href="politica-de-privacidade">Política de Privacidade</a></p>
-</div>
+<script>
+  function waLink(numero, servico){
+    const msg = "Olá! Preciso de atendimento sobre: " + servico;
+    return "https://wa.me/" + numero + "?text=" + encodeURIComponent(msg);
+  }
 
-<div class="footer-mob">
-	<header>
-		<h1>ATENDIMENTO</h1>
-	</header>
-	<article>
-		<a href="https://wa.me/5511921474407?text=Olá! Gostaria de falar com o atendimento" class="footer-mob-item" target="_blank">
-			<i class="iconify" data-icon="ic:baseline-whatsapp"></i>	
-		</a>
-	</article>
-</div>
+  // Botões principais
+  document.getElementById("btnAtendimento").href = "https://wa.me/" + WHATSAPP_ATENDIMENTO;
+  document.getElementById("btnSuporteTopo").href = waLink(WHATSAPP_SUPORTE, "Suporte Técnico");
 
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"fa8fa3b1b24742d09007932f0717801d","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+  // Cards
+  document.getElementById("svc2Via").href            = waLink(WHATSAPP_2VIA, "2ª Via de Boleto");
+  document.getElementById("svcSuporte").href         = waLink(WHATSAPP_SUPORTE, "Suporte Técnico");
+  document.getElementById("svcOutros").href          = waLink(WHATSAPP_OUTROS, "Outros Assuntos");
+  document.getElementById("svcAtendimentoCard").href = waLink(WHATSAPP_ATENDIMENTO, "Atendimento Geral");
+
+  // Botão flutuante (atendimento geral)
+  document.getElementById("waFloat").href = "https://wa.me/" + WHATSAPP_ATENDIMENTO;
+
+  // Ano
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+
 </body>
-
 </html>
